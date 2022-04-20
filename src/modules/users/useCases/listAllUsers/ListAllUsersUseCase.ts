@@ -13,6 +13,10 @@ class ListAllUsersUseCase {
 
     console.log(user);
 
+    if (!user) {
+      throw new Error("User not exists!");
+    }
+
     if (!user.admin) {
       throw new Error("User is not admin!");
     }
