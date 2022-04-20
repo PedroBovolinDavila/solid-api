@@ -11,8 +11,6 @@ class ListAllUsersUseCase {
   execute({ user_id }: IRequest): User[] {
     const user = this.usersRepository.findById(user_id);
 
-    console.log(user);
-
     if (!user) {
       throw new Error("User not exists!");
     }
